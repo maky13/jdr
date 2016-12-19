@@ -98,13 +98,10 @@
         <header class="masthead">
             <div class="container">
                 <div class="row">
-                    <div class="col col-sm-12 panel" style="box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.2);">
+                    <div class="col col-sm-12 panel" style="box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.2); text-align: center;">
                         <a href="{{ path('main_homepage') }}" title="Manaceo Accueil">
-                            <img src="/Resources/public/img/banniere.png" style="position: absolute;left: -1px;width: 100.2%;top: -1px;">
+                            <img src="/Resources/public/img/banniere.png" style=" max-height: 200px;">
                         </a>
-                        <div class="panel-body" style="color: #1ea089; font-size: 21px;padding-top: 200px;">
-                            Interventions au sein des Organismes du secteur social, éducatif et pédagogique
-                        </div>
                     </div>
                 </div>
             </div>
@@ -116,88 +113,17 @@
                 <a style="position: relative; top: -16px; margin-left: 93%;" href="{{ path('fos_user_security_logout') }}">Déconnexion</a>
             {% endif %}
             <div class="row">
-                <div class="col col-sm-3">
-                    <div id="sidebar" style="max-width:260px;">
-                        <ul class="nav nav-stacked">
-                            <li><h4 class="highlight">Domaines de formation<i class="glyphicon glyphicon-list pull-right"></i></h4></li>
-                        </ul>
-                        <div class="accordion" id="accordion2">
-                            <div class="panel accordion-group"">
-                                <div class="accordion-heading">
-                                    <a class="panel-body accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
-                                        <span class="glyphicon glyphicon-chevron-down pull-right"></span>
-                                        Équipe éducative
-                                    </a>
-                                </div>
-                                <div id="collapseOne" class="accordion-body collapse">
-                                    <div class="accordion-inner">
-                                        <ol class="list-unstyled">
-                                            <li><a href="{{ path('main_homepage') }}">Pratiques éducatives et pédagogiques <span class="glyphicon glyphicon-new-window" style="font-size: smaller"></span></a></li><hr style="margin-top: 0px;margin-bottom: 0px;" />
-                                            <li><a href="{{ path('main_homepage') }}">Organisation interne et pratiques professionnelles <span class="glyphicon glyphicon-new-window" style="font-size: smaller"></span></a></li><hr style="margin-top: 0px;margin-bottom: 0px;" />
-                                            <li><a href="{{ path('main_homepage', {'slug': 'ecoute-sociale'}) }}">Écoute Sociale</a></li><hr style="margin-top: 0px;margin-bottom: 0px;" />
-                                            <li><a href="{{ path('main_homepage', {'slug': 'les-ecrits-professionnels'}) }}">Les écrits professionnels</a></li><hr style="margin-top: 0px;margin-bottom: 0px;" />
-                                            <li><a href="{{ path('main_homepage', {'slug': 'methodologie-de-projet'}) }}">Méthodologie de projet</a></li><hr style="margin-top: 0px;margin-bottom: 0px;" />
-                                        </ol>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="panel accordion-group">
-                                <div class="accordion-heading">
-                                    <a class="panel-body accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
-                                        <span class="glyphicon glyphicon-chevron-down pull-right"></span>
-                                        Veilleurs de nuit et Gardiens
-                                    </a>
-                                </div>
-                                <div id="collapseTwo" class="accordion-body collapse">
-                                    <div class="accordion-inner">
-                                        <ol class="list-unstyled">
-                                            <li><a href="{{ path('main_homepage', {'slug': 'la-fonction-educative-des-veilleurs-de-nuit-et-gardiens'}) }}">La fonction éducative</a></li><hr style="margin-top: 0px;margin-bottom: 0px;" />
-                                            <li><a href="{{ path('main_homepage', {'slug': 'la-fonction-technique-des-veilleurs-de-nuit-et-gardiens'}) }}">La fonction technique</a></li><hr style="margin-top: 0px;margin-bottom: 0px;" />
-                                        </ol>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="panel accordion-group">
-                                <div class="accordion-heading">
-                                    <a class="panel-body accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTree">
-                                        <span class="glyphicon glyphicon-chevron-down pull-right"></span>
-                                        Personnel d'Accueil,<br/>Entretien et Restauration
-                                    </a>
-                                </div>
-                                <div id="collapseTree" class="accordion-body collapse">
-                                    <div class="accordion-inner">
-                                        <ol class="list-unstyled">
-                                            <li><a href="{{ path('main_homepage', {'slug': 'accueil-des-usagers-et-fonction-educative-des-personnels-d-accueil-et-de-restauration'}) }}">Accueil des usagers et fonction éducative</a></li><hr style="margin-top: 0px;margin-bottom: 0px;" />
-                                            <li><a href="{{ path('main_homepage', {'slug': 'communication-interne'}) }}">Communication interne</a></li><hr style="margin-top: 0px;margin-bottom: 0px;" />
-                                            <li><a href="{{ path('main_homepage', {'slug': 'gestion-du-temps'}) }}">Gestion du temps</a></li><hr style="margin-top: 0px;margin-bottom: 0px;" />
-                                        </ol>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="panel accordion-group">
-                                <div class="accordion-heading">
-                                    <a class="panel-body accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseFour">
-                                        <span class="glyphicon glyphicon-chevron-down pull-right"></span>
-                                        Administrateurs et Bénévoles
-                                    </a>
-                                </div>
-                                <div id="collapseFour" class="accordion-body collapse">
-                                    <div class="accordion-inner">
-                                        <ol class="list-unstyled">
-                                            <li><a href="{{ path('main_homepage', {'slug': 'la-fonction-socio-educative'}) }}">La fonction socio-éducative</a></li><hr style="margin-top: 0px;margin-bottom: 0px;" />
-                                            <li><a href="{{ path('main_homepage', {'slug': 'methodologie-de-projet'}) }}">Méthodologie de projet</a></li><hr style="margin-top: 0px;margin-bottom: 0px;" />
-                                            <li><a href="{{ path('main_homepage', {'slug': 'relation-d-aide'}) }}">Relation d'aide</a></li><hr style="margin-top: 0px;margin-bottom: 0px;" />
-                                        </ol>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col col-sm-9">
+                <div class="col col-sm-12">
                     <div class="panel">
                         {% block body %}
-
+                            <div class="row" style="text-align: justify">
+                                <div class="col col-sm-6">
+                                    <button type="button" class="btn btn-primary">Créer une partie</button>
+                                </div>
+                                <div class="col col-sm-6">
+                                    <button type="button" class="btn btn-primary">Rejoindre une partie</button>
+                                </div>
+                            </div>
                         {% endblock %}
                     </div>
                 </div> 
