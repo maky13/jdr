@@ -1,0 +1,3 @@
+naheulbeuk_homepage:
+    path:     /
+    defaults: { _controller: NaheulbeukBundle:Default:index }
