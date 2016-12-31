@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Plateau de jeu</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <style type="text/css">
+            .outerclip {
+                -webkit-transform: skew(-30deg);
+                -ms-transform: skew(-30deg);
+                -transform: skew(-30deg);
+                overflow: hidden;
+                display: inline-block;
+                height: 100px;
+                margin-right: 40px;
+            }
+            .innerclip {
+                -webkit-transform: skew(50deg);
+                -ms-transform: skew(50deg);
+                transform: skew(50deg);
+                overflow: hidden;
+                display: inline-block;
+                height: 100px;
+                width: 100px;
+                background-color: blue;
+            }
+            img {
+                -webkit-transform: skew(-30deg);
+                -ms-transform: skew(-30deg);
+                transform: skew(-30deg);
+            }
+            .row {
+                margin-bottom: -55px;   
+            }
+            .row:nth-child(odd) {
+                margin-left:70px;
+            }
+            .plop {
+                transform: perspective(500px) rotateX(45deg) translateX(400px);
+            }
+
+            .outerclip:nth-child(n+3) {
+                margin-right:36px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="plop">
+            <div class="row">
+                <div class="outerclip" data-missClic="">
+                    <div class="innerclip">
+                    </div>
+                </div><div class="outerclip">
+                    <div class="innerclip">
+                    </div>
+                </div><div class="outerclip">
+                    <div class="innerclip">
+                    </div>
+                </div><div class="outerclip">
+                    <div class="innerclip">
+                    </div>
+                </div><div class="outerclip">
+                    <div class="innerclip">
+                    </div>
+                </div><div class="outerclip">
+                    <div class="innerclip">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="outerclip">
+                    <div class="innerclip">
+                    </div>
+                </div><div class="outerclip">
+                    <div class="innerclip">
+                    </div>
+                </div><div class="outerclip">
+                    <div class="innerclip">
+                    </div>
+                </div><div class="outerclip">
+                    <div class="innerclip">
+                    </div>
+                </div><div class="outerclip">
+                    <div class="innerclip">
+                    </div>
+                </div><div class="outerclip">
+                    <div class="innerclip">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="outerclip">
+                    <div class="innerclip">
+                    </div>
+                </div><div class="outerclip">
+                    <div class="innerclip">
+                    </div>
+                </div><div class="outerclip">
+                    <div class="innerclip">
+                    </div>
+                </div><div class="outerclip">
+                    <div class="innerclip">
+                    </div>
+                </div><div class="outerclip">
+                    <div class="innerclip">
+                    </div>
+                </div><div class="outerclip">
+                    <div class="innerclip">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="outerclip">
+                    <div class="innerclip">
+                    </div>
+                </div><div class="outerclip">
+                    <div class="innerclip">
+                    </div>
+                </div><div class="outerclip">
+                    <div class="innerclip">
+                    </div>
+                </div><div class="outerclip">
+                    <div class="innerclip">
+                    </div>
+                </div><div class="outerclip">
+                    <div class="innerclip">
+                    </div>
+                </div><div class="outerclip">
+                    <div class="innerclip">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="outerclip">
+                    <div class="innerclip">
+                    </div>
+                </div><div class="outerclip">
+                    <div class="innerclip">
+                    </div>
+                </div><div class="outerclip">
+                    <div class="innerclip">
+                    </div>
+                </div><div class="outerclip">
+                    <div class="innerclip">
+                    </div>
+                </div><div class="outerclip">
+                    <div class="innerclip">
+                    </div>
+                </div><div class="outerclip">
+                    <div class="innerclip">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="outerclip">
+                    <div class="innerclip">
+                    </div>
+                </div><div class="outerclip">
+                    <div class="innerclip">
+                    </div>
+                </div><div class="outerclip">
+                    <div class="innerclip">
+                    </div>
+                </div><div class="outerclip">
+                    <div class="innerclip">
+                    </div>
+                </div><div class="outerclip">
+                    <div class="innerclip">
+                    </div>
+                </div><div class="outerclip">
+                    <div class="innerclip">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="outerclip">
+                    <div class="innerclip">
+                    </div>
+                </div><div class="outerclip">
+                    <div class="innerclip">
+                    </div>
+                </div><div class="outerclip">
+                    <div class="innerclip">
+                    </div>
+                </div><div class="outerclip">
+                    <div class="innerclip">
+                    </div>
+                </div><div class="outerclip">
+                    <div class="innerclip">
+                    </div>
+                </div><div class="outerclip">
+                    <div class="innerclip">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="outerclip">
+                    <div class="innerclip">
+                    </div>
+                </div><div class="outerclip">
+                    <div class="innerclip">
+                    </div>
+                </div><div class="outerclip">
+                    <div class="innerclip">
+                    </div>
+                </div><div class="outerclip">
+                    <div class="innerclip">
+                    </div>
+                </div><div class="outerclip">
+                    <div class="innerclip">
+                    </div>
+                </div><div class="outerclip">
+                    <div class="innerclip">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="outerclip">
+                    <div class="innerclip">
+                    </div>
+                </div><div class="outerclip">
+                    <div class="innerclip">
+                    </div>
+                </div><div class="outerclip">
+                    <div class="innerclip">
+                    </div>
+                </div><div class="outerclip">
+                    <div class="innerclip">
+                    </div>
+                </div><div class="outerclip">
+                    <div class="innerclip">
+                    </div>
+                </div><div class="outerclip">
+                    <div class="innerclip">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="outerclip">
+                    <div class="innerclip">
+                    </div>
+                </div><div class="outerclip">
+                    <div class="innerclip">
+                    </div>
+                </div><div class="outerclip">
+                    <div class="innerclip">
+                    </div>
+                </div><div class="outerclip">
+                    <div class="innerclip">
+                    </div>
+                </div><div class="outerclip">
+                    <div class="innerclip">
+                    </div>
+                </div><div class="outerclip">
+                    <div class="innerclip">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="outerclip">
+                    <div class="innerclip">
+                    </div>
+                </div><div class="outerclip">
+                    <div class="innerclip">
+                    </div>
+                </div><div class="outerclip">
+                    <div class="innerclip">
+                    </div>
+                </div><div class="outerclip">
+                    <div class="innerclip">
+                    </div>
+                </div><div class="outerclip">
+                    <div class="innerclip">
+                    </div>
+                </div><div class="outerclip">
+                    <div class="innerclip">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            $('.innerclip').click(function (event) {
+                $(this).css('background-color', 'red');
+            });
+        </script>
+    </body>
+</html>

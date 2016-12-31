@@ -2,12 +2,183 @@
 <html>
     <head>
         <meta charset="UTF-8" />
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
-        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+        <title>Manaceo - {% block title %}{% endblock %}</title>
+        {% stylesheets filter='cssrewrite' '@MainBundle/Resources/public/css/*' %}
+        <link rel="stylesheet" href="{{ asset_url }}" type="text/css" />
+        {% endstylesheets %}
+        <link rel="icon" href="{{ asset('/Resources/public/img/favicon.png') }}">
+        {% javascripts '@MainBundle/Resources/public/js/*' %}
+        <script type='text/javascript' src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script type='text/javascript' src="http://getbootstrap.com/dist/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="{{ asset_url }}"></script>
+        {% endjavascripts %}
     </head>
     <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+
+        <!-- Navbar -->
+        <div class="navbar navbar-static">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="glyphicon glyphicon-chevron-down"></span>
+                    </a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">  
+                        <li><a class="navbar-header" href="{{ path('main_homepage') }}">Accueil</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Domaines de formation <span class="glyphicon glyphicon-chevron-down"></span></a>
+                            <ul class="dropdown-menu">
+                                <!--<li class="dropdown-submenu">
+                                    <a tabindex="-1" href="#">Équipe éducative</a>
+                                    <ul class="dropdown-menu">-->
+                                <li class="dropdown-submenu">
+                                    <a href="{{ path('main_homepage') }}">Pratiques éducatives et pédagogiques</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="{{ path('main_homepage', {'slug': 'accompagnement-social'}) }}">Accompagnement social</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="{{ path('main_homepage', {'slug': 'actions-collectives-et-vie-sociale'}) }}">Actions collectives et vie sociale</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="{{ path('main_homepage', {'slug': 'actions-de-prevention'}) }}">Actions de prévention</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="{{ path('main_homepage', {'slug': 'gestion-des-situations-difficiles'}) }}">Gestion des situations difficiles</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="{{ path('main_homepage', {'slug': 'parcours-de-vie-et-bilan-diagnostic'}) }}">Parcours de vie et bilan diagnostic</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="{{ path('main_homepage', {'slug': 'programmation-neuro-linguistique'}) }}">Programmation neuro-linguistique</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="{{ path('main_homepage', {'slug': 'relation-d-aide'}) }}">Relation d'aide</a></li>
+                                    </ul>
+                                </li>
+                                <li class="divider"></li>
+                                <li class="dropdown-submenu">
+                                    <a href="{{ path('main_homepage') }}">Organisation interne et pratiques professionnelles</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="{{ path('main_homepage', {'slug': 'communication-interne'}) }}">Communication interne</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="{{ path('main_homepage', {'slug': 'gestion-du-temps'}) }}">Gestion du temps</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="{{ path('main_homepage', {'slug': 'les-ecrits-institutionnels'}) }}">Les écrits institutionnels</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="{{ path('main_homepage', {'slug': 'procedures'}) }}">Procédures</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="{{ path('main_homepage', {'slug': 'realisation-des-taches-et-missions'}) }}">Réalisation des tâches et missions</a></li>
+                                    </ul>
+                                </li>
+                                <li class="divider"></li>
+                                <li><a href="{{ path('main_homepage', {'slug': 'methodologie-de-projet'}) }}">Méthodologie de projet</a></li>
+                                <li class="divider"></li>
+                                <li><a href="{{ path('main_homepage', {'slug': 'les-ecrits-professionnels'}) }}">Les écrits professionnels</a></li>
+                                <li class="divider"></li>
+                                <li><a href="{{ path('main_homepage', {'slug': 'ecoute-sociale'}) }}">Écoute sociale</a></li>
+                                <li class="divider"></li>
+                                <li><a href="{{ path('main_homepage', {'slug': 'insertion-sociale-et-exclusion'}) }}">Insertion sociale et exclusion</a></li>
+                            </ul>
+                        </li>
+                        </li>
+                        <li><a href="{{ path('main_homepage') }}">Conseil</a></li>
+                        <li><a href="{{ path('main_homepage') }}">Déroulement d'une formation</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Nous connaître <span class="glyphicon glyphicon-chevron-down"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="{{ path('main_homepage') }}">Nos formateurs</a></li>
+                                <li class="divider"></li>
+                                <li><a href="{{ path('main_homepage') }}">Présentation</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="nav pull-right navbar-nav">
+                        <li><a href="{{ path('main_homepage') }}">Commander des formations</a></li>
+                        <li><a href="{{ path('main_homepage') }}">Nous contacter</a></li>  
+                    </ul>
+                </div>		
+            </div>
+        </div><!-- /.navbar -->
+
+        <header class="masthead">
+            <div class="container">
+                <div class="row">
+                    <div class="col col-sm-12 panel" style="box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.2); text-align: center;">
+                        <a href="{{ path('main_homepage') }}" title="Manaceo Accueil">
+                            <img src="/Resources/public/img/banniere.png" style=" max-height: 200px;">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Body -->
+        <div class="container">
+            {% if is_granted('IS_AUTHENTICATED_REMEMBERED') %}
+                <a style="position: relative; top: -16px; margin-left: 93%;" href="{{ path('fos_user_security_logout') }}">Déconnexion</a>
+            {% endif %}
+            <div class="row">
+                <div class="col col-sm-12">
+                    <div class="panel">
+                        {% block body %}
+                            <div class="row" style="text-align: justify">
+                                <div class="col col-sm-6">
+                                    <button type="button" class="btn btn-primary">Créer une partie</button>
+                                </div>
+                                <div class="col col-sm-6">
+                                    <button type="button" class="btn btn-primary">Rejoindre une partie</button>
+                                </div>
+                            </div>
+                        {% endblock %}
+                    </div>
+                </div> 
+            </div>
+            <footer>
+                <hr style="height: 1px; background-color: #CBCBCB;">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-4" style="text-align: center">
+                            <a href="{{ path('main_homepage') }}">Plan du site</a>
+                        </div>
+                        <div class="col-sm-4" style="text-align: center">
+                            <a href="{{ path('main_homepage') }}">Mentions légales</a>
+                        </div>
+                        <div class="col-sm-4" style="text-align: center">
+                            <a href="{{ path('main_homepage') }}">Nous contacter</a>
+                        </div>
+                    </div>
+                </div>
+                <br/>
+            </footer>
+        </div>
+        <script type='text/javascript'>
+
+            $(document).ready(function () {
+
+                $('#sidebar').affix({
+                    offset: {
+                        top: 240
+                    }
+                });
+
+            });
+
+            {% block JS %}
+
+            {% endblock %}
+        </script>
+
+        <script>
+            (function (i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r;
+                i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date();
+                a = s.createElement(o),
+                        m = s.getElementsByTagName(o)[0];
+                a.async = 1;
+                a.src = g;
+                m.parentNode.insertBefore(a, m)
+            })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+            {#ga('create', 'UA-58942210-1', 'auto');
+            ga('send', 'pageview');#}
+
+        </script>
     </body>
 </html>

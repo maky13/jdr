@@ -1,0 +1,29 @@
+.formation {
+    border: 1px solid darkgrey;
+    box-shadow: 1px 1px 1px;
+    display: block;
+    height: 25px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+li#check-list {
+    list-style-type: none;
+}
+
+li#check-list:before {
+    content: url(/web/Resources/public/img/puce.png) ' ';
+}
+
+textarea#manaceo_mainbundle_paragraphe_contenu {
+    max-width: 100%;
+    min-height: 200px;
+}
+
+div.introduction {
+    margin-bottom: 10px;
+}
+
+ul#Onglets.nav li.active a {
+    color: #1ea089;
+}
